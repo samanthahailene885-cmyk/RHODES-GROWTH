@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Fond abstrait RHODES GROWTH">
+  <defs>
+    <linearGradient id="g0" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f3d17"/>
+      <stop offset="0.55" stop-color="#1B5E20"/>
+      <stop offset="1" stop-color="#0b2710"/>
+    </linearGradient>
+
+    <radialGradient id="glowGold" cx="20%" cy="15%" r="65%">
+      <stop offset="0" stop-color="#F9A825" stop-opacity="0.40"/>
+      <stop offset="0.35" stop-color="#F9A825" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#F9A825" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowGreen" cx="78%" cy="20%" r="70%">
+      <stop offset="0" stop-color="#35b35a" stop-opacity="0.24"/>
+      <stop offset="0.45" stop-color="#1B5E20" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#1B5E20" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="stripe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="28" height="28" fill="none"/>
+      <rect x="0" y="0" width="10" height="28" fill="#ffffff" opacity="0.035"/>
+    </pattern>
+
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"/>
+    </filter>
+
+    <clipPath id="clip">
+      <rect x="0" y="0" width="1920" height="1080" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1920" height="1080" fill="url(#g0)"/>
+
+    <rect width="1920" height="1080" fill="url(#glowGold)"/>
+    <rect width="1920" height="1080" fill="url(#glowGreen)"/>
+
+    <rect width="1920" height="1080" fill="url(#stripe)" opacity="0.55"/>
+    <rect width="1920" height="1080" fill="url(#p)" opacity="0.75"/>
+
+    <g opacity="0.20" filter="url(#soft)">
+      <path d="M-120 720 C 240 500, 480 1040, 920 820 C 1200 680, 1320 420, 1680 540 C 1920 620, 2100 520, 2140 420 L 2140 1200 L -120 1200 Z" fill="#0a2a10"/>
+      <path d="M-120 360 C 220 180, 520 520, 900 340 C 1220 190, 1400 120, 1720 210 C 1940 270, 2100 200, 2140 120 L 2140 680 C 2000 760, 1780 850, 1500 760 C 1180 660, 950 620, 720 700 C 420 810, 140 720, -120 820 Z" fill="#123e1a"/>
+    </g>
+
+    <g opacity="0.14">
+      <circle cx="250" cy="170" r="210" fill="#F9A825"/>
+      <circle cx="1580" cy="160" r="260" fill="#2cb154"/>
+      <circle cx="1640" cy="850" r="320" fill="#0a2a10"/>
+    </g>
+
+    <rect width="1920" height="1080" filter="url(#grain)"/>
+  </g>
+</svg>
