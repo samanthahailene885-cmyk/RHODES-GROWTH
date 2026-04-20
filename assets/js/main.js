@@ -50,6 +50,10 @@
             el.innerHTML = v;
           }
         });
+
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
       }
 
       var saved = 'fr';
