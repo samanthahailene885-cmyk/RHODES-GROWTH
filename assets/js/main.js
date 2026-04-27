@@ -155,5 +155,25 @@
         }
       });
     }
+
+    var heroImg = document.querySelector('.hero-media-img[data-slides]');
+    if (heroImg) {
+      var raw = heroImg.getAttribute('data-slides') || '';
+      var slides = raw.split(',').map(function (s) { return (s || '').trim(); }).filter(Boolean);
+      if (slides.length > 1) {
+        var currentIndex = Math.max(0, slides.indexOf(heroImg.getAttribute('src')));
+        var delayMs = 4200;
+        var fadeMs = 450;
+        window.setInterval(function () {
+          currentIndex = (currentIndex + 1) % slides.length;
+          var next = slides[currentIndex];
+          heroImg.classList.add('is-fading');
+          window.setTimeout(function () {
+            heroImg.setAttribute('src', next);
+            heroImg.classList.remove('is-fading');
+          }, fadeMs);
+        }, delayMs);
+      }
+    }
   });
 })();
